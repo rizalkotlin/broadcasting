@@ -1,0 +1,29 @@
+name: broadcasting
+description: broadcasting SDK v1 for Dart lang (with Flutter support) that allows you to create real-time applications
+version: 1.0.0
+homepage: https://www.broadcasting.com/docs
+
+environment:
+  sdk: ">=2.12.0 <3.0.0"
+
+scripts:
+  test:
+    default: dart pub run test -P unit
+    integration: dart pub run test -P integration
+  validate:
+    analysis: dart analyze --fatal-warnings lib
+    formatting: dart format -o none --set-exit-if-changed lib
+
+dependencies:
+  async: ^2.5.0
+  cbor: ^4.0.0
+  convert: ^3.0.0
+  crypto: ^3.0.0
+  encrypt: ^5.0.0-beta.1
+  form_data: ^1.0.0-nullsafety.1
+  meta: ^1.3.0
+  pedantic: ^1.11.0
+  pool: ^1.5.0
+  xml: ^5.0.2
+dev_dependencies:
+  test: 1.16.7
